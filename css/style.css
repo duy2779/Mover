@@ -1,0 +1,49 @@
+body {
+  font-family: "Poppins";
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  background-color: #0f66dd;
+  color: #fff;
+}
+
+.contact li {
+  display: flex;
+}
+
+.contact li i{
+    font-size:1.5em;
+    margin-top: 10px;
+}
+
+.contact li .contact-text{
+    font-size: .875rem;
+}
+
+.contact li .contact-text{
+    padding-left: 15px;
+}
+
+.contact li .contact-text p{
+    font-size: 15px;
+}
+
+.contact li:last-child{
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    margin-left: 30px;
+}
