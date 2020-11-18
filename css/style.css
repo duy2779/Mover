@@ -4,6 +4,10 @@ body {
   line-height: 1.5;
 }
 
+.container{
+  max-width: 1320px;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -14,11 +18,17 @@ ul {
 
 .wrapper {
   width: 100%;
+  margin: 0;
 }
 
 .header {
   background-color: #0f66dd;
   color: #fff;
+}
+
+.logo-title{
+  font-size:40px;
+  font-weight: 600;
 }
 
 .contact li {
