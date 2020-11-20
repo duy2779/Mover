@@ -94,7 +94,6 @@ ul {
 
 #menu {
   width: 100%;
-  overflow: hidden;
 }
 
 .menu-misc {
@@ -220,6 +219,40 @@ ul {
     content: "";
     width: 100%;
   }
+
+  .sub-menu-container {
+    opacity: 0;
+    padding: 10px;
+    margin-top: 0;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 13px 42px 11px rgba(0, 0, 0, 0.05);
+    top: 100%;
+    left: 0;
+    width: 280px;
+    transition: opacity .3s ease,margin .25s ease;
+  }
+
+  .menu-item.sub-menu .menu-link:hover ~ .sub-menu-container{
+    opacity: 1;
+  }
+
+  .sub-menu-container:hover{
+    opacity: 1;
+  }
+  .sub-menu-container .menu-item > .menu-link {
+    font-size: 0.875rem;
+    padding: 10px 15px;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sub-menu-container .menu-item > .menu-link:hover {
+    color: #0f66dd;
+    background-color:#F9F9F9;
+    transform:translateX(3px);
+  }
 }
 
 .primary-menu-trigger {
@@ -229,6 +262,7 @@ ul {
 @media (max-width: 1000px) {
   .primary-menu {
     flex-basis: 100%;
+    text-transform: uppercase;
   }
 
   .primary-menu-trigger {
@@ -244,6 +278,23 @@ ul {
   }
   .menu-item {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-link i {
+    display: none;
+  }
+
+  .sub-menu-trigger {
+    margin-right: 5px;
+    display: block !important;
+    border: 0;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    right: 0;
   }
 }
 
@@ -251,4 +302,10 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.sub-menu-container .menu-item > .menu-link {
+  color: #666;
+  letter-spacing: 0;
+  position: relative;
 }
